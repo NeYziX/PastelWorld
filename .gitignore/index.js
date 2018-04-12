@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("§");
 
 bot.on('ready', function() {
-  bot.user.setGame("§help | By NeYziX");
+  bot.user.setGame("§help | Dev By NeYziX");
   console.log("le bot a démarré"); 
 });
 
