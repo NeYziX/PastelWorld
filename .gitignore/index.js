@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ("&");
+var prefix = ("§");
 
 bot.on('ready', function() {
   bot.user.setGame("&help | By NeYziX");
@@ -27,22 +27,10 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "invite") {
+    if (message.content === prefix + "créateur") {
         var embed = new Discord.RichEmbed()
-        .setDescription("Pour m'inviter sur ton Discord :")
-        .addField("Lien :", "https://discordapp.com/oauth2/authorize?client_id=432978371077472257&permissions=8&scope=bot")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    message.delete();
-    }
-});
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "shop") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Pour visiter le NeYziX-s Shop :")
-        .addField("Lien :", "http://neyzix.000webhostapp.com")
+        .setDescription("Pour visiter le site du créateur :")
+        .addField("Lien :", "xrainbow.000webhostapp.com")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     message.delete();
@@ -54,10 +42,10 @@ bot.on('message', message => {
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
         .setDescription("⇩Liste des commandes⇩:")
-        .addField("&help", "Pour afficher la liste les commandes")
-        .addField("&infodiscord", "Pour afficher les informations du Discord")
-        .addField("&shop", "Pour afficher le shop de NeYziX")
-        .addField("&invite", "Pour m'inviter sur ton Discord")
+        .addField("§help", "Pour afficher la liste les commandes")
+        .addField("§infodiscord", "Pour afficher les informations du Discord")
+        .addField("§shop", "Pour afficher le shop de NeYziX")
+        .addField("§créateur", "Pour afficher le site du créateur")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     message.delete();
