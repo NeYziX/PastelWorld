@@ -43,7 +43,7 @@ bot.on('message', message => {
         .setDescription("⇩Liste des commandes⇩:")
         .addField("§help", "Pour afficher la liste les commandes")
         .addField("§info", "Pour afficher les informations du Discord")
-        .addField("§socialmedia | §sm", "Pour les réseaux sociaux d")
+        .addField("§socialmedia | §sm", "Pour les réseaux sociaux de PastelWorld")
         .addField("§créateur", "Pour afficher le site du créateur")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
