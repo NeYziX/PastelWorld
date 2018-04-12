@@ -77,6 +77,23 @@ bot.on('message', message => {
     }
 });
 
+if (message.content === "Comment vas-tu le bot?) {
+    random();
+
+    if (randnum == 1) {
+        message.reply("(Réponde numéro 1), Merci je vais très bien!");
+    }
+
+    if (randnum == 2) {
+        message.reply("(Réponde numéro 2), Je ne vais pas très bien merci de te soucier de moi !");
+    }
+
+function random(min, max){
+  min = Math.ceil(0);
+  max = Math.floor(5);
+  randnum = Math.floor(Math.random() * (max - min +1)+ min);
+}
+
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "bienvenue").send(`${member}, allez dans le #conditions-ďutilisation puis mettez une réaction :bust_in_silhouette:  **(après avoir lu les règles)** ;)`)
 });
