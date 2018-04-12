@@ -54,7 +54,7 @@ bot.on("guildMemberAdd", member => {
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`2sec...`)
+    member.guild.channels.find("name", "bienvenue").send(`${user.idname} a quitté PastelWorld. Nous te souhaitons une bonne continuation. Nous sommes **${server.member_count}**`)
 });
 
 bot.on("guildMemberAdd", member => {
