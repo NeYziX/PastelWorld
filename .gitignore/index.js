@@ -12,7 +12,7 @@ bot.login("NDM0MDMxODM2OTgxODg2OTg2.DbEfKg.MaBcnykEwD29xzVrNq7jQ6xX4oM")
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "infodiscord") {
+    if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
         .setDescription("Information de Discord :")
         .addField("Nom du Discord :", message.guild.name)        
@@ -30,7 +30,7 @@ bot.on('message', message => {
     if (message.content === prefix + "créateur") {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour visiter le site du créateur :")
-        .addField("Lien :", "xrainbow.000webhostapp.com")
+        .addField("Lien :", "http://xrainbow.000webhostapp.com")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -42,9 +42,31 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("⇩Liste des commandes⇩:")
         .addField("§help", "Pour afficher la liste les commandes")
-        .addField("§infodiscord", "Pour afficher les informations du Discord")
-        .addField("§shop", "Pour afficher le shop de NeYziX")
+        .addField("§info", "Pour afficher les informations du Discord")
+        .addField("§socialmedia | §sm", "Pour les réseaux sociaux d")
         .addField("§créateur", "Pour afficher le site du créateur")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
+});
+
+bot.on('message', message => {
+
+    if (message.content === prefix + "sm") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Pour visiter le site du créateur :")
+        .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
+});
+
+bot.on('message', message => {
+
+    if (message.content === prefix + "socialmedia") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Réseaux sociaux de PastelWorld :")
+        .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
