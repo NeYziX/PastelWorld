@@ -86,6 +86,6 @@ bot.on("guildMemberRemove", member => {
 });
 
 bot.on("guildMemberAdd", member => {
-    var role = member.guild.roles.find('name', '🎊Nouveau');
+    var role = member.guild.roles.find('name', 'Nouveaux');
     member.addRole(role)
 })
