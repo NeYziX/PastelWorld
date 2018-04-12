@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
-const bot = new discord.Client();
+const bot = new Discord.Client();
 
 var prefix = ("&");
 
-bot.on("ready", function() {
-  bot.user.setGame("&help | By NeYziX")
+bot.on('ready', function() {
+  bot.user.setGame("&help | By NeYziX");
   console.log("le bot a démarré"); 
 });
 
