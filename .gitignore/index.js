@@ -50,11 +50,11 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "arrivé-départ").send(`Bienvenue à ${member} sur le serveur ;)`)
+    member.guild.channels.find("name", "bienvenue").send(`Allez dans le #conditions-ďutilisation puis mettez une réaction :bust_in_silhouette:  **(après avoir lu les règles)** ;)`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "arrivé-départ").send(`Aurevoir ${member}.`)
+    member.guild.channels.find("name", "bienvenue").send(`Aurevoir ${member}.`)
 });
 
 bot.on("guildMemberAdd", member => {
