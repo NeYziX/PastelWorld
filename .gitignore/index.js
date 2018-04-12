@@ -54,7 +54,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "sm") {
         var embed = new Discord.RichEmbed()
-        .setDescription("Pour visiter le site du créateur :")
+        .setDescription("Réseaux sociaux de PastelWorld :")
         .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
