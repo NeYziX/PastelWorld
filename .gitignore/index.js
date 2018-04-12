@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 var prefix = ("§");
+var randnum = 0;
 
 bot.on('ready', function() {
   bot.user.setGame("§help | Dev By NeYziX");
