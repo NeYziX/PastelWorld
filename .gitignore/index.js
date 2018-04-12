@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("§");
 
 bot.on('ready', function() {
-  bot.user.setGame("&help | By NeYziX");
+  bot.user.setGame("§help | By NeYziX");
   console.log("le bot a démarré"); 
 });
 
@@ -21,7 +21,6 @@ bot.on('message', message => {
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
-    message.delete();
     }
 });
 
@@ -33,7 +32,6 @@ bot.on('message', message => {
         .addField("Lien :", "xrainbow.000webhostapp.com")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
-    message.delete();
     }
 });
 
@@ -48,7 +46,6 @@ bot.on('message', message => {
         .addField("§créateur", "Pour afficher le site du créateur")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
-    message.delete();
     }
 });
 
