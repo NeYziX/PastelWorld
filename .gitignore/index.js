@@ -54,7 +54,7 @@ bot.on("guildMemberAdd", member => {
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`Aurevoir ${member}.`)
+    member.guild.channels.find("name", "bienvenue").send(`2sec...`)
 });
 
 bot.on("guildMemberAdd", member => {
