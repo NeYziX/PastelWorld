@@ -55,6 +55,13 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
+    if (message.content === prefix + "register") {
+        {!role {user} Minecraft}
+    }
+});
+
+bot.on('message', message => {
+
     if (message.content === prefix + "sm") {
         var embed = new Discord.RichEmbed()
         .setDescription("Réseaux sociaux de PastelWorld :")
