@@ -20,6 +20,7 @@ bot.on('message', message => {
         .addField("Crée par :", message.owner_id)
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -31,6 +32,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour visiter le site du créateur :")
         .addField("Lien :", "http://xrainbow.000webhostapp.com")
+        .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -45,6 +47,7 @@ bot.on('message', message => {
         .addField("§info", "Pour afficher les informations du Discord")
         .addField("§socialmedia | §sm", "Pour les réseaux sociaux de PastelWorld")
         .addField("§créateur", "Pour afficher le site du créateur")
+        .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -55,7 +58,8 @@ bot.on('message', message => {
     if (message.content === prefix + "sm") {
         var embed = new Discord.RichEmbed()
         .setDescription("Réseaux sociaux de PastelWorld :")
-        .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
+        .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/") 
+        .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -67,6 +71,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Réseaux sociaux de PastelWorld :")
         .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
+        .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
