@@ -11,7 +11,7 @@ bot.on('ready', function() {
 bot.login("NDM0MDMxODM2OTgxODg2OTg2.DbEfKg.MaBcnykEwD29xzVrNq7jQ6xX4oM")
 
 bot.on('message', message => {
-    if(message.content[0] === PREFIX) {
+    if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
         if(spliteMessage[0] === "!ban") {
             if(spliteMessage.lenght === 2) {
