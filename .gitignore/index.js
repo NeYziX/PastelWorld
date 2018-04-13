@@ -37,15 +37,6 @@ bot.on('message', message => {
             }).catch(console.error);
         bot.channels.get('434344990508843011').send("Lien envoyé par : " + message.author.username);
         }
-
-        else if(spliteMessage[0] === "§ban") {
-            if(spliteMessage.lenght === 2) {
-                message.guild.ban(message.mentions.users.first());
-            }
-            else
-                message.reply("Problème dans les paramètres");
-        }
-    }
 });
 
 bot.on('message', message => {
