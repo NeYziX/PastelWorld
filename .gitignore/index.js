@@ -31,6 +31,11 @@ bot.on('message', message => {
             }).catch(console.error);
         bot.channels.get('').send("Commande §help utilisée par : " + message.author.username);
         }
+        else if(spliteMessage[0] === "§ping") {
+            message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");
+            }).catch(console.error);
+        bot.channels.get('').send("Commande §help utilisée par : " + message.author.username);
+        }
     }
 });
 
