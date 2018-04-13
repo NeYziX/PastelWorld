@@ -35,6 +35,13 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
+    if (message.content === prefix + "info") {
+      message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS")  
+    }
+}
+)       
+
+bot.on('message', message => {
 
     if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
