@@ -77,6 +77,10 @@ bot.on('message', message => {
     }
 });
 
+bot.on('messageReactionAdd', (reaction, user) => {
+    if(reaction.emoji.name === "☺")
+        bot.channels.get("434032374188212236").send('TADA');
+
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "bienvenue").send(`${member}, allez dans le #conditions-ďutilisation puis mettez une réaction :bust_in_silhouette:  **(après avoir lu les règles)** ;)`)
 });
