@@ -79,8 +79,9 @@ bot.on('message', message => {
 
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "☺")
-        var test = member.guild.roles.find('name', 'Minecraft');
-        member.addRole(test)
+        bot.channels.get('434032374188212236').send("EZ");
+  
+    bot.channels.get('434032374188212236').send("Réaction" + reaction.emoji.name);
 });
 
 bot.on("guildMemberAdd", member => {
