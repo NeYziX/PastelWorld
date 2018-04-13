@@ -11,6 +11,19 @@ bot.on('ready', function() {
 bot.login("NDM0MDMxODM2OTgxODg2OTg2.DbEfKg.MaBcnykEwD29xzVrNq7jQ6xX4oM")
 
 bot.on('message', message => {
+    if(message.content[0] === PREFIX) {
+        let spliteMessage = message.content.split(' ');
+        if(spliteMessage[0] === "§ban") {
+            if(spliteMessage.lenght === 2) {
+                message.guild.ban(message.mentions.users.first());
+            }
+            else
+                message.reply("Problème dans les paramètres");
+        }
+    }
+});
+
+bot.on('message', message => {
 
     if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
