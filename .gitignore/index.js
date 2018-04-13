@@ -13,7 +13,15 @@ bot.login("NDM0MDMxODM2OTgxODg2OTg2.DbEfKg.MaBcnykEwD29xzVrNq7jQ6xX4oM")
 bot.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
-        if(spliteMessage[0] === "!ban") {
+        if(spliteMessage[0] === "§hello") {
+            message.channel.send("world!");
+            message.author.createDM().then(channel => {
+                channel.send('WORLD!');
+            }).catch(console.error);
+        bot.channels.get('434344990508843011').send("Commande §hello : " + message.author.username);
+        }
+
+        else if(spliteMessage[0] === "§ban") {
             if(spliteMessage.lenght === 2) {
                 message.guild.ban(message.mentions.users.first());
             }
