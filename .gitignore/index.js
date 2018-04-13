@@ -79,8 +79,8 @@ bot.on('message', message => {
 
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "☺")
-        bot.channels.get("434032374188212236").send('TADA');
-    bot.channels.get("434032374188212236").send('Réaction ' + reaction.emoji.name);
+        bot.channels.get('434032374188212236').send("TADA");
+    bot.channels.get('434032374188212236').send("Réaction" + reaction.emoji.name);
 });
 
 bot.on("guildMemberAdd", member => {
