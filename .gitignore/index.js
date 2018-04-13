@@ -30,17 +30,6 @@ bot.on('message', message => {
         }
     }
 });
- 
-bot.on('message', message => {
-        let spliteMessage = message.content.split(' ');
-        if(spliteMessage[0] === "http") {
-            message.channel.send("Lien interdit message.author.username");
-            message.author.createDM().then(channel => {
-                channel.send('Les liens sont interdits sur PastelWorld');
-            }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Lien envoyé par : " + message.author.username);
-        }
-});
 
 bot.on('message', message => {
 
