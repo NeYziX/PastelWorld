@@ -41,22 +41,6 @@ bot.on('message', message => {
         .setDescription("Information de Discord :")
         .addField("Nom du Discord :", message.guild.name)        
         .addField("Crée le :", message.guild.createdAt)
-        .addField("Crée par :", message.server.owner_id)
-        .addField("Tu as rejoint le :", message.member.joinedAt)
-        .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
-        .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
-});
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "user") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Information sur toi :")
-        .addField("Nom du Discord :", message.guild.name)        
-        .addField("Crée le :", message.guild.createdAt)
         .addField("Crée par :", message.guild.owner_id)
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
