@@ -35,7 +35,7 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
-    if (message.content === prefix + "info"){
+    if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
 });      
