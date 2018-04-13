@@ -38,13 +38,6 @@ bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
-    
-    if (message.content === prefix + "clear"){
-        if (message.member.hasPermission("MANAGE_MESSAGES")){
-        message.channel.fetchMessages()
-            .then(function(list){
-                message.channel.bulkDelete(list);
-            }, function(err){message.channel.send("Erreur")})}
 });      
 
 bot.on('message', message => {
