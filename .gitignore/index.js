@@ -7,7 +7,7 @@ bot.on('ready', function() {
   bot.user.setGame("§help | Dev By NeYziX");
   console.log("le bot a démarré"); 
   bot.channels.get('434344990508843011').send("**=======================**");
-  bot.channels.get('434344990508843011').send("\LE BOT VIENT DE SE LANCER/");
+  bot.channels.get('434344990508843011').send("|LE BOT VIENT DE SE LANCER|");
   bot.channels.get('434344990508843011').send("**=======================**");
 });
 
