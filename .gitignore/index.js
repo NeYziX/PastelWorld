@@ -30,6 +30,7 @@ bot.on('message', message => {
         }
  
 bot.on('message', message => {
+        let spliteMessage = message.content.split(' ');
         if(spliteMessage[0] === "http") {
             message.channel.send("Lien interdit message.author.username");
             message.author.createDM().then(channel => {
