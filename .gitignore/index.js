@@ -24,9 +24,17 @@ bot.on('message', message => {
         else if(spliteMessage[0] === "§help") {
             message.channel.send("Liste des commandes envoyées en privée.");
             message.author.createDM().then(channel => {
-                channel.send('⇩Liste des commandes⇩: \n §help, pour afficher la liste les commandes \n §info, pour afficher les informations du Discord \n §socialmedia | §sm, pour afficher les réseaux sociaux de PastelWorld \n §créateur, pour afficher le site du créateur \n © NeYziX | Tous droits réservés.');
+                channel.send('**⇩ Liste des commandes ⇩: \n \n §help, pour afficher la liste les commandes \n \n §info, pour afficher les informations du Discord \n \n §socialmedia | §sm, pour afficher les réseaux sociaux de PastelWorld \n \n §créateur, pour afficher le site du créateur \n \n _© NeYziX | Tous droits réservés_**');
             }).catch(console.error);
         bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
+        }
+      
+        if(spliteMessage[0] === "http") {
+            message.channel.send("Lien interdit message.author.username");
+            message.author.createDM().then(channel => {
+                channel.send('Les liens sont interdits sur PastelWorld');
+            }).catch(console.error);
+        bot.channels.get('434344990508843011').send("Lien envoyé par : " + message.author.username);
         }
 
         else if(spliteMessage[0] === "§ban") {
