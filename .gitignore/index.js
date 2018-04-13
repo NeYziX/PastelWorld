@@ -44,7 +44,9 @@ bot.on('message', message => {
         message.channel.fetchMessages()
             .then(function(list){
                 message.channel.bulkDelete(list);
-            }, function(err){message.channel.send("Erreur")})
+            }, function(err){message.channel.send("Erreur")
+        })        
+    }
 });      
 
 bot.on('message', message => {
