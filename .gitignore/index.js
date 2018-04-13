@@ -28,7 +28,8 @@ bot.on('message', message => {
             }).catch(console.error);
         bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
         }
-      
+ 
+bot.on('message', message => {
         if(spliteMessage[0] === "http") {
             message.channel.send("Lien interdit message.author.username");
             message.author.createDM().then(channel => {
