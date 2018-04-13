@@ -30,13 +30,7 @@ bot.on('message', message => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n §help, pour afficher la liste les commandes \n \n §info, pour afficher les informations du Discord \n \n §socialmedia | §sm, pour afficher les réseaux sociaux de PastelWorld \n \n §créateur, pour afficher le site du créateur \n \n _© NeYziX | Tous droits réservés_**');
             }).catch(console.error);
         bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
-        }
-      
-        else if(spliteMessage[0] === "§ping") {
-            message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");
-            }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
-        }
+        }    
     }
 });
 
@@ -46,10 +40,11 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Information de Discord :")
         .addField("Nom du Discord :", message.guild.name)        
-        .addField("Crée le :", message.guild.createdAt)
-        .addField("Crée par :", message.guild.owner.name)
+        .addField("Crée le :", "19/01/18 20:09:34")
+        .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .addField("ID :", "403989383423721472"
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
