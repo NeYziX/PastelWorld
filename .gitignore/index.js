@@ -18,7 +18,15 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('WORLD!');
             }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Commande §hello : " + message.author.username);
+        bot.channels.get('434344990508843011').send("Commande §hello utilisée par : " + message.author.username);
+        }
+      
+        else if(spliteMessage[0] === "§help") {
+            message.channel.send("Liste des commandes envoyées en privée.");
+            message.author.createDM().then(channel => {
+                channel.send('⇩Liste des commandes⇩: \n §help, pour afficher la liste les commandes \n §info, pour afficher les informations du Discord \n §socialmedia | §sm, pour afficher les réseaux sociaux de PastelWorld \n §créateur, pour afficher le site du créateur \n © NeYziX | Tous droits réservés.');
+            }).catch(console.error);
+        bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
         }
 
         else if(spliteMessage[0] === "§ban") {
@@ -53,21 +61,6 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour visiter le site du créateur :")
         .addField("Lien :", "http://xrainbow.000webhostapp.com")
-        .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
-});
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "help") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("⇩Liste des commandes⇩:")
-        .addField("§help", "Pour afficher la liste les commandes")
-        .addField("§info", "Pour afficher les informations du Discord")
-        .addField("§socialmedia | §sm", "Pour les réseaux sociaux de PastelWorld")
-        .addField("§créateur", "Pour afficher le site du créateur")
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
