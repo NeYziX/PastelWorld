@@ -6,9 +6,9 @@ var prefix = ("§");
 bot.on('ready', function() {
   bot.user.setGame("§help | Dev By NeYziX");
   console.log("le bot a démarré"); 
-  bot.channels.get('434344990508843011').send("**=======================**");
-  bot.channels.get('434344990508843011').send("| LE BOT VIENT DE SE LANCER |");
-  bot.channels.get('434344990508843011').send("**=======================**");
+  bot.channels.get('').send("**=======================**");
+  bot.channels.get('').send("| LE BOT VIENT DE SE LANCER |");
+  bot.channels.get('').send("**=======================**");
 });
 
 bot.login("NDM0MDMxODM2OTgxODg2OTg2.DbEfKg.MaBcnykEwD29xzVrNq7jQ6xX4oM")
@@ -21,7 +21,7 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('WORLD!');
             }).catch(console.error);
-        bot.channels.get('434347533238665227').send("Commande §hello utilisée par : " + message.author.username);
+        bot.channels.get('').send("Commande §hello utilisée par : " + message.author.username);
         }
       
         else if(spliteMessage[0] === "§help") {
@@ -29,7 +29,7 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n §help, pour afficher la liste les commandes \n \n §info, pour afficher les informations du Discord \n \n §socialmedia | §sm, pour afficher les réseaux sociaux de PastelWorld \n \n §créateur, pour afficher le site du créateur \n \n _© NeYziX | Tous droits réservés_**');
             }).catch(console.error);
-        bot.channels.get('434347533238665227').send("Commande §help utilisée par : " + message.author.username);
+        bot.channels.get('').send("Commande §help utilisée par : " + message.author.username);
         }
     }
 });
@@ -88,9 +88,9 @@ bot.on('message', message => {
 
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "☺")
-        bot.channels.get('434347533238665227').send("EZ");
+        bot.channels.get('').send("EZ");
   
-    bot.channels.get('434347533238665227').send("Réaction utilisée : " + reaction.emoji.name);
+    bot.channels.get('').send("Réaction utilisée : " + reaction.emoji.name);
 });
 
 bot.on("guildMemberAdd", member => {
