@@ -52,6 +52,22 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
+    if (message.content === prefix + "user") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Information sur toi :")
+        .addField("Nom du Discord :", message.guild.name)        
+        .addField("Crée le :", message.guild.createdAt)
+        .addField("Crée par :", message.server.owner_id)
+        .addField("Tu as rejoint le :", message.member.joinedAt)
+        .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .setFooter("©NeYziX | Tous droits réservés.")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
+});
+
+bot.on('message', message => {
+
     if (message.content === prefix + "créateur") {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour visiter le site du créateur :")
@@ -88,9 +104,9 @@ bot.on('message', message => {
 
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "☺")
-        bot.channels.get('434032374188212236').send("EZ");
+        bot.channels.get('434347533238665227').send("EZ");
   
-    bot.channels.get('434344990508843011').send("Réaction utilisée : " + reaction.emoji.name);
+    bot.channels.get('434347533238665227').send("Réaction utilisée : " + reaction.emoji.name);
 });
 
 bot.on("guildMemberAdd", member => {
