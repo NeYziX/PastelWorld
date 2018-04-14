@@ -26,7 +26,7 @@ message.channel.send({embed: {
 
     },
 
-    color: 15722240
+    color: 24578965
 
 }
 
