@@ -52,19 +52,7 @@ bot.on('message', message => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n __§help :__ \n Pour afficher la liste les commandes \n \n __§info :__ \n Pour afficher les informations du Discord \n \n __§ping :__ \n pour afficher la latence du bot \n \n __§socialmedia | §sm :__ \n Pour afficher les réseaux sociaux de PastelWorld \n \n __§avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __§créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_');
             }).catch(console.error);
         bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
-        }    
-
-        else if(spliteMessage[0] === "§hhelp") {
-            message.channel.send("**⇩ Liste des commandes ⇩: \n \n __§help :__ \n Pour afficher la liste les commandes en privée \n \n __§helphere | §hhelp :__ \n Pour afficher la liste des commandes dans ce salon \n \n __§info :__ \n Pour afficher les informations du Discord \n \n __§ping :__ \n pour afficher la latence du bot \n \n __§socialmedia | §sm :__ \n Pour afficher les réseaux sociaux de PastelWorld \n \n __§avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __§créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_");                
-            }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Commande §hhelp utilisée par : " + message.author.username);
-        } 
- 
-        else if(spliteMessage[0] === "§helphere") {
-            message.channel.send("**⇩ Liste des commandes ⇩: \n \n __§help :__ \n Pour afficher la liste les commandes en privée \n \n __§helphere | §hhelp :__ \n Pour afficher la liste des commandes dans ce salon \n \n __§info :__ \n Pour afficher les informations du Discord \n \n __§ping :__ \n pour afficher la latence du bot \n \n __§socialmedia | §sm :__ \n Pour afficher les réseaux sociaux de PastelWorld \n \n __§avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __§créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_");                
-            }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Commande §hhelp utilisée par : " + message.author.username);
-        }          
+        }             
     }    
 });
 
