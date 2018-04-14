@@ -11,7 +11,29 @@ bot.on('ready', function() {
   bot.channels.get('434344990508843011').send("**=======================**");
 });
 
-bot.login("NDM0MDMxODM2OTgxODg2OTg2.DbEfKg.MaBcnykEwD29xzVrNq7jQ6xX4oM")
+bot.login(process.env.BOT_TOKEN);
+
+bot.on('message', message => {
+  if (message.content.startsWith(prefix + "avatar")) {
+
+message.channel.send({embed: {
+
+    title: "Votre avatar",
+
+    image: {
+
+        url: message.author.avatarURL
+
+    },
+
+    color: 15722240
+
+}
+
+    })
+
+}
+});
 
 bot.on('message', message => {
     if(message.content[0] === prefix) {
