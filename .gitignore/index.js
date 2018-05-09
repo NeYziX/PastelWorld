@@ -75,6 +75,25 @@ bot.on("message", function(message) {
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
             break;
+            case "chat":
+            let xoargs = message.content.split(" ").slice(1);
+            let xo03 = xoargs.join(" ")
+            var xo02 = message.guild.channels.find('name', 'pwchat');
+            if(!xo02) return message.reply("Le channel **pwchat** est introuvable")
+            if(message.channel.name !== 'u-chat') return message.reply("Commande à effectuer dans **pwchat**")
+            if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs où je suis.")
+            var embed = new Discord.RichEmbed()
+            .setColor("0x88CC14")
+            .setTitle("Pastel Message")
+            .addField("Pseudo de l'utilisateur", message.author.username + "#" + message.author.discriminator, true)
+            .addField("Discord", message.guild.name, true)
+            .addField("Message", xo03)
+            .setFooter("© NeYziX | Tous droits réservés.")
+            .setTimestamp()
+          bot.channels.findAll('name', 'pwchat').map(channel => channel.send(embed))
+            break;
+    }
+});
         
     }});
 
