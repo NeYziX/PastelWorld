@@ -86,6 +86,7 @@ bot.on("message", function(message) {
             .setFooter("© NeYziX | Tous droits réservés.")
             .setTimestamp()
           bot.channels.findAll('name', 'pwchat').map(channel => channel.send(embed))
+          message.delete();
             break;
     }
 });
