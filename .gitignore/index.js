@@ -80,7 +80,7 @@ bot.on("message", function(message) {
             let xo03 = xoargs.join(" ")
             var xo02 = message.guild.channels.find('name', 'pwchat');
             if(!xo02) return message.reply("Le channel **pwchat** est introuvable")
-            if(message.channel.name !== 'u-chat') return message.reply("Commande à effectuer dans **pwchat**")
+            if(message.channel.name !== 'pwchat') return message.reply("Commande à effectuer dans **pwchat**")
             if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs où je suis.")
             var embed = new Discord.RichEmbed()
             .setColor("0x88CC14")
