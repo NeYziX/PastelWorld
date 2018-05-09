@@ -43,11 +43,6 @@ bot.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "roll":
-            var roll = Math.floor(Math.random() * args[1]) +1;
-            if (!roll) return message.reply("Entre un numéro")
-            message.channel.send("Je choisi le numéro " + roll + " !");
-            break;
         case "8ball":
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
