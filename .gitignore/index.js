@@ -83,7 +83,7 @@ bot.on("message", function(message) {
             .addField("Pseudo de l'utilisateur", message.author.username + "#" + message.author.discriminator, true)
             .addField("Discord", message.guild.name, true)
             .addField("Message", xo03)
-            .setFooter("© NeYziX | Tous droits réservés.")
+            .setFooter("© PastelWorld | Tous droits réservés.")
             .setTimestamp()
           bot.channels.findAll('name', 'pwchat').map(channel => channel.send(embed))
           message.delete();
@@ -100,15 +100,7 @@ bot.on('message', message => {
                 channel.send('WORLD!');
             }).catch(console.error);
         bot.channels.get('434344990508843011').send("Commande §hello utilisée par : " + message.author.username);
-        }
-      
-        else if(spliteMessage[0] === "§help") {
-            message.channel.send("Liste des commandes envoyées en privée.");
-            message.author.createDM().then(channel => {
-                channel.send('**⇩ Liste des commandes ⇩: \n \n __§help :__ \n Pour afficher la liste les commandes \n \n __§info :__ \n Pour afficher les informations du Discord \n \n __§ping :__ \n pour afficher la latence du bot \n \n __§socialmedia | §sm :__ \n Pour afficher les réseaux sociaux de PastelWorld \n \n __§avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __§créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_');
-            }).catch(console.error);
-        bot.channels.get('434344990508843011').send("Commande §help utilisée par : " + message.author.username);
-        }             
+        }            
     }    
 });
 
@@ -116,7 +108,27 @@ bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
-});      
+});  
+
+bot.on('message', message => {
+
+    if (message.content === prefix + "help") {
+        var embed = new Discord.RichEmbed()
+        .setTitle("Voici la liste des commandes")
+        .addField("§help", "Liste des commandes")
+        .addField("§avatar", "Ton avatar")
+        .addField("§info", "Informations du discord")
+        .addField("§ping", "Latence entre le bot et le serveur")
+        .addField("§site", "Site de NeYziX")
+        .addField("§chat", "Chat relié avec tous les serveurs de PastelWorld")
+        .addField("§8ball", "Question au bot | Réponse en Oui ou Non")
+        .addField("§clear", "Staff > Clear 50 messages")
+        .setFooter("© PastelWorld | Tous droits réservés.")
+        .setColor("0x2E9AFE")
+        .setTimestamp()
+    message.channel.sendEmbed(embed)
+    }
+});    
 
 bot.on('message', message => {
 
@@ -129,7 +141,7 @@ bot.on('message', message => {
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .addField("ID :", "403989383423721472")
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© PastelWorld | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -141,7 +153,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour visiter le site du créateur :")
         .addField("Lien :", "http://xrainbow.000webhostapp.com")
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© PastelWorld | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -153,7 +165,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Réseaux sociaux de PastelWorld :")
         .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/") 
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© PastelWorld | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -165,7 +177,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Réseaux sociaux de PastelWorld :")
         .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© PastelWorld | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
