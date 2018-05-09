@@ -112,7 +112,7 @@ bot.on('message', message => {
         .setDescription("Information de Discord :")
         .addField("Nom du Discord :", message.guild.name)        
         .addField("Crée le :", "19/01/18 20:09:34")
-        .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
+        .addField("Crée par :", "message.guild.owner)
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .addField("ID :", "403989383423721472")
