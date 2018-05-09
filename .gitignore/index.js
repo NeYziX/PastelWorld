@@ -89,8 +89,6 @@ bot.on("message", function(message) {
             break;
     }
 });
-        
-    }});
 
 bot.on('message', message => {
     if(message.content[0] === prefix) {
