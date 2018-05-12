@@ -73,10 +73,10 @@ bot.on("message", function(message) {
             case "chat":
             let xoargs = message.content.split(" ").slice(1);
             let xo03 = xoargs.join(" ")
-            var xo02 = message.guild.channels.find('name', 'pwchat');
-            if(!xo02) return message.reply("Le channel **pwchat** est introuvable")
-            if(message.channel.name !== 'pwchat') return message.reply("Commande à effectuer dans **pwchat**")
-            if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs où je suis.")
+            var xo02 = message.guild.channels.find('name', 'pwchat-taverne-🍻');
+            if(!xo02) return message.reply("Le channel **pwchat-taverne-🍻** est introuvable")
+            if(message.channel.name !== 'pwchat-taverne-🍻') return message.reply("Commande à effectuer dans **pwchat-taverne-🍻**")
+            if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs de PastelWorld.")
             var embed = new Discord.RichEmbed()
             .setColor("0x88CC14")
             .setTitle("Pastel Message")
@@ -85,7 +85,7 @@ bot.on("message", function(message) {
             .addField("Message", xo03)
             .setFooter("© PastelWorld | Tous droits réservés.")
             .setTimestamp()
-          bot.channels.findAll('name', 'pwchat').map(channel => channel.send(embed))
+          bot.channels.findAll('name', 'pwchat-taverne-🍻').map(channel => channel.send(embed))
           message.delete();
             break;
     }
