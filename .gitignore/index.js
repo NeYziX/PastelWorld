@@ -89,8 +89,8 @@ bot.on("message", function(message) {
           message.delete();
             break;
           case "annonces":
-            let xoargs = message.content.split(" ").slice(1);
-            let xo03d = xoargs.join(" ")
+            let xoargds = message.content.split(" ").slice(1);
+            let xo03d = xoargds.join(" ")
             var xo02d = message.guild.channels.find('name', 'annonces');
             if(!xo02d) return message.reply("Le channel **annonces** est introuvable")
             if(message.channel.name !== 'annonces') return message.reply("Commande à effectuer dans **annonces**")
