@@ -88,6 +88,21 @@ bot.on("message", function(message) {
           bot.channels.findAll('name', 'pwchat-taverne-🍻').map(channel => channel.send(embed))
           message.delete();
             break;
+          case "annonces":
+            let xoargs = message.content.split(" ").slice(1);
+            let xo03 = xoargs.join(" ")
+            var xo02 = message.guild.channels.find('name', 'annonces');
+            if(!xo02) return message.reply("Le channel **annonces** est introuvable")
+            if(message.channel.name !== 'annonces') return message.reply("Commande à effectuer dans **annonces**")
+            if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs de PastelWorld.")
+            var embed = new Discord.RichEmbed()
+            .setColor("0x88CC14")
+            .setTitle("PastelWorld")
+            .addField("Annonce", xo03)
+            .setFooter("© PastelWorld | Tous droits réservés.")
+            .setTimestamp()
+          bot.channels.findAll('name', 'annonces').map(channel => channel.send(embed))
+            break;
     }
 });
 
