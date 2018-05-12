@@ -96,7 +96,7 @@ bot.on("message", function(message) {
             if(message.channel.name !== 'annonces') return message.reply("Commande à effectuer dans **annonces**")
             if(!xo03d) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs de PastelWorld.")
             var embed = new Discord.RichEmbed()
-            .setColor("0x00FF00")
+            .setColor("0xFAA61A")
             .setTitle("Annonce")
             .setDescription(xo03d)
             .setFooter("© PastelWorld | Tous droits réservés.")
