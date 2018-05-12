@@ -90,15 +90,15 @@ bot.on("message", function(message) {
             break;
           case "annonces":
             let xoargs = message.content.split(" ").slice(1);
-            let xo03 = xoargs.join(" ")
-            var xo02 = message.guild.channels.find('name', 'annonces');
-            if(!xo02) return message.reply("Le channel **annonces** est introuvable")
+            let xo03d = xoargs.join(" ")
+            var xo02d = message.guild.channels.find('name', 'annonces');
+            if(!xo02d) return message.reply("Le channel **annonces** est introuvable")
             if(message.channel.name !== 'annonces') return message.reply("Commande à effectuer dans **annonces**")
-            if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs de PastelWorld.")
+            if(!xo03d) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs de PastelWorld.")
             var embed = new Discord.RichEmbed()
             .setColor("0x88CC14")
             .setTitle("PastelWorld")
-            .addField("Annonce", xo03)
+            .addField("Annonce", xo03d)
             .setFooter("© PastelWorld | Tous droits réservés.")
             .setTimestamp()
           bot.channels.findAll('name', 'annonces').map(channel => channel.send(embed))
