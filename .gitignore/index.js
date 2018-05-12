@@ -152,6 +152,7 @@ bot.on('message', message => {
         .setFooter("© PastelWorld | Tous droits réservés.")
         .setColor("0x2E9AFE")
         .setTimestamp()
+        .setThumbnail(message.guild.iconURL)
     message.channel.sendEmbed(embed)
     }
 });    
@@ -169,6 +170,7 @@ bot.on('message', message => {
         .addField("ID :", "403989383423721472")
         .setFooter("© PastelWorld | Tous droits réservés.")
         .setColor("0x81DAF5")
+        .setThumbnail(message.guild.iconURL)
     message.channel.sendEmbed(embed)
     }
 });
