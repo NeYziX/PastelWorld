@@ -108,6 +108,16 @@ bot.on("message", function(message) {
                         message.channel.bulkDelete(list);
                         message.channel.bulkDelete(list);
                         message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
             break;
           case "annonces":
