@@ -99,6 +99,17 @@ bot.on("message", function(message) {
           bot.channels.findAll('name', 'pwchat-taverne-🍻').map(channel => channel.send(embed))
           message.delete();
             break;
+          case "purge":
+            if (message.member.hasPermission("MANAGE_MESSAGES")){
+                message.channel.fetchMessages()
+                    .then(function(list){
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                }, function(err){message.channel.send("Erreur")})}
+            break;
           case "annonces":
             let xoargds = message.content.split(" ").slice(1);
             let xo03d = xoargds.join(" ")
