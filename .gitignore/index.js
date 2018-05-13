@@ -240,7 +240,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member}, allez dans le #conditions-ďutilisation puis mettez une réaction :bust_in_silhouette:  **(après avoir lu les règles)** ;)`)
+    member.guild.channels.find("name", "bienvenue").send("Nous vous souhaitons la bienvenue sur **PastelWorld** !")
 });
 
 bot.on("guildMemberRemove", member => {
